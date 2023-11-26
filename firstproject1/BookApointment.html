@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <style>
+        #ti1{
+            color: orange;
+        }
+        #one{
+            margin: 2%;
+            padding-left: 20%;
+            padding-right: 25%;
+            text-align: center;
+        }
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+        }
+        label{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body bgcolor="#FFF2D8">
+   <div id="one">
+    <fieldset style="background-color: white; border-radius: 20px;">
+        <h1 id="ti1">Book a call</h1>
+        <h3 id="we1">Book a call slot and our representative will call you within 1hr of Selected time.</h3>
+        <hr>
+        <form action="#" onsubmit="onsignup(event)">
+            <label for="001" style="padding-right: 8rem;">Name</label>
+            <br>
+            <input type="text" id="001" name="Name" value="Shahir">
+            <br>
+            <label for="002" style="padding-right: 8rem;"">Email</label>
+            <br>
+            <input type="email" id="002" name="Email" value="ShahirSayed143@gmail.com" >
+            <br>
+            <label for="003" style="padding-right: 8rem;">phone</label>
+            <br>
+            <input type="tel" id="003" name="number" value="+91 *******">
+            <br>
+            <label for="004" style="padding-right: 7rem;" >Time for call</label>
+            <br>
+            <input type="date" id="004" name="date">
+            <input type="time" id="004" name="Time" >
+            <br>
+            <br>
+            <button  style="width: 200px; background-color: orange;">Get a call</button>
+        </form>
+    </fieldset>
+    <script>
+        function onsignup(event){
+            event.preventDefault();
+
+            //localstorage
+            localStorage.setItem('Name',event.target.Name.value);
+            localStorage.setItem('Email',event.target.Email.value);
+            localStorage.setItem('Number',event.target.number.value);
+            localStorage.setItem('Date',event.target.date.value);
+            localStorage.setItem('Time',event.target.Time.value);
+
+            //sessionstorage
+            sessionStorage.setItem('Name',event.target.Name.value);
+            sessionStorage.setItem('Email',event.target.Email.value);
+            sessionStorage.setItem('Number',event.target.number.value);
+            sessionStorage.setItem('Date',event.target.date.value);
+            sessionStorage.setItem('Time',event.target.Time.value);
+
+            //cookie 
+            document.cookie = 'Name=' + event.target.Name.value;
+            document.cookie = 'Email=' + event.target.Email.value;
+            document.cookie = 'Number=' + event.target.number.value;
+            document.cookie = 'Date=' + event.target.date.value;
+            document.cookie = 'Time=' + event.target.Time.value;
+
+
+
+            console.log(event.target.Name.value);
+            console.log(event.target.Email.value);
+            console.log(event.target.number.value);
+            console.log(event.target.date.value);
+            console.log(event.target.Time.value);
+            
+        }
+    </script>
+</body>
+</html>

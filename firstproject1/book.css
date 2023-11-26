@@ -1,0 +1,22 @@
+#ti1{
+    color: orange;
+}
+#one{
+    margin: 2%;
+    padding-left: 20%;
+    padding-right: 25%;
+    text-align: center;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+}
+label{
+    font-size: 15px;
+}
+.list-group-item{
+    text-align: start;
+    list-style-type: disc;
+}
+body{
+ background-color: #FFF2D8;   
+} 

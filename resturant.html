@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="myForm">
+        <label for="item">Item</label>
+        <input type="text" id="item" name="item">
+        <label for="itemCost">item Cost</label>
+        <input type="number" id="itemCost" name="itemCost">
+        <label for="table" class="form-label">Choose a Category</label>
+                <select id="table" class="form-select">
+                    <option selected>Choose...</option>
+                    <option value="Table1">Table1</option>
+                    <option value="Table2">Table2</option>
+                    <option value="Table3">Table3</option>
+                    </select>
+        <input type="submit" value="Add item" id="Submit" name="submit">
+    </form>
+    <h1>Table1</h1>
+    <ul id="table1-items"></ul>
+    <h1>Table2</h1>
+    <ul id="table2-items"></ul>
+    <h1>Table3</h1>
+    <ul id="table3-items"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./resturant.js"></script>
+</body>
+</html>

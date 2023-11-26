@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <style>
+        body{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" id="form" onsubmit="onsign(event)">
+    <h1>Details</h1>
+    <label for="Name">Name</label>
+    <input type="text" id="Name" name="name" value="Shahir"> 
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="shair142@f.com">
+    <label for="phone">Phone</label>
+    <input type="tel" name="phone" id="phone" value="42154320">
+    <input type="submit" name="submit" id="submit">
+    </form>
+    <ul id="itemList" style="list-style-type: disc;"></ul>
+
+
+    <script>
+        let form=document.getElementById('form');
+        let itemsList=document.getElementById('itemList');
+
+        form.addEventListener('submit', submitForm);
+
+        function onsign(event){
+            let details={
+            name:event.target.Name.value,
+            email:event.target.email.value,
+            phone:event.target.phone.value,
+        }
+        let book=JSON.stringify(details);
+        localStorage.setItem('details',book);
+        let Book=JSON.parse(localStorage.getItem('details'));
+        console.log(Book);
+        }
+        function submitForm(e){
+            e.preventDefault();
+            let item1=document.getElementById('Name').value;
+            let item2=document.getElementById('email').value;
+            let item3=document.getElementById('phone').value;
+
+            let li=document.createElement('li');
+
+            li.className='list-group-item';
+
+            let text = item1 + ' - ' + item2 + ' - ' + item3;
+
+            li.appendChild(document.createTextNode(text));
+
+            itemsList.appendChild(li);
+
+        }
+    </script>
+</body>
+</html>
